@@ -3,4 +3,4 @@
 container:
   img: daisykey08/k8sphpdanil:latest
 
-  repCount: 2
+repCount: 2
