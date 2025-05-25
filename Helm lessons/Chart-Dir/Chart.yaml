@@ -1,0 +1,18 @@
+apiVersion: v2
+name      : App-HelmChart
+description: My Helm chart for kubernetes
+type: application
+version: 3.17.3 #this is Helm Chart Version
+appVersion: "1.0.0" #this is version of our App
+
+#This block shows other possibilities you can write in file
+keywords:
+  - apache
+  - http
+  - https
+  - danil
+
+maintainers:
+  - name: Danil Kravtsov
+    email: kravc-08@yandex.ru
+    url: none

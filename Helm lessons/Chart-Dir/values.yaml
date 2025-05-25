@@ -1,0 +1,6 @@
+#This is default values for my manifests
+
+container:
+  img: daisykey08/k8sphpdanil:latest
+
+  repCount: 2

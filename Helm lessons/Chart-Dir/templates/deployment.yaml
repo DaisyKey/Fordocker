@@ -1,21 +1,21 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: my-web-Deployment
+  name: {{ Release.Name }}-deployment
   labels:
-    app : my-k8s-deployment 
+    app : {{ Release.Name }}-deployment 
 spec:
-  replicas: 3
+  replicas: {{ .Values.repCount }}
   selector: 
     matchLabels: 
-      project: kgb
+      project: {{ Release.Name }}
   template:
     metadata:
       labels:
-        project: kgb
+        project: {{ Release.Name }}
     spec:
       containers:
-        - name: kgb-web
-          image: daisykey08/k8sphpdanil:latest
+        - name: {{ Release.Name }}-web
+          image: {{ .Values.container.img }}
           ports:
             - containerPort: 80
