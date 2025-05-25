@@ -1,0 +1,21 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: my-web2-Deployment
+  labels:
+    app : my-k8s2-deployment 
+spec:
+  replicas: 3
+  selector: 
+    matchLabels: 
+      project: kgb2
+  template:
+    metadata:
+      labels:
+        project: kgb2
+    spec:
+      containers:
+        - name: kgb2-web
+          image: daisykey08/k8sphpdanil:latest
+          ports:
+            - containerPort: 80
